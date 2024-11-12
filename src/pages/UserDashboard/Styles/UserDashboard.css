@@ -1,0 +1,80 @@
+/* Sidebar Styles */  
+.sidebar {  
+  position: relative;  
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);  
+  background-color: #691a36;  
+  z-index: 1000;  
+  padding: 16px;  
+  height: 110vh; /* Full height on desktop */  
+  display: flex;  
+  flex-direction: column;  
+}  
+
+/* Layout Styles for Desktop */  
+@media (min-width: 768px) {  
+  .sidebar {  
+    height: 110vh; /* Full height for the sidebar on desktop */  
+    width: 240px; /* Sidebar width */  
+    flex-direction: column;
+  }  
+
+  .dashboard {  
+    margin-left: 240px; /* Content area adjusts */  
+  }  
+}  
+
+/* Responsive styles for mobile */  
+@media (max-width: 768px) {  
+  .sidebar {  
+    height: auto; /* Dynamic height */  
+    width: 100%; /* Full width */  
+    padding: 10px 15px; /* Reduced padding */  
+    justify-content: flex-start;  
+    align-items: flex-start;  
+  }  
+
+  .sidebar .sidebar-link {  
+    font-size: 14px; /* Font size for mobile */  
+    margin-right: 12px; /* Space between items */  
+  }  
+
+  .dashboard {  
+    margin-top: 60px; /* Space for sidebar */  
+    flex-direction: column; /* Stack items */  
+  }  
+}  
+
+/* General Dashboard Styling */  
+.dashboard {  
+  display: flex;  
+  flex: 1;  
+  flex-direction: row; /* Row layout for desktop */  
+  min-height: 100vh; /* Full height */  
+}  
+
+/* Sidebar link styling */  
+.sidebar-link {  
+  color: #f1f1f1;  
+  text-decoration: none;  
+  display: flex;  
+  align-items: center;  
+  padding: 8px;  
+  transition: all 0.3s ease;  
+}  
+
+.sidebar-link:hover {  
+  color: #e0e0e0;  
+  text-decoration: underline;  
+}  
+
+.sidebar-link.active {  
+  font-weight: bold;  
+  text-decoration: underline;  
+}  
+
+.sidebar-link:active,  
+.sidebar-link-selected {  
+  background-color: rgba(255, 255, 255, 0.1);  
+  border-left: 4px solid #f1f1f1;  
+}
+
