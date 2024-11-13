@@ -58,8 +58,8 @@ const Dashboard = () => {
       <FollowRequestsModal show={showFollowRequestsModal} toggle={toggleFollowRequestsModal} />  
 
       {/* Recipes List */}  
-      <div className="mt-8">  
-        <h3 className="text-xl font-semibold mb-4">Recipes Shared by Following</h3>  
+      <div className="mt-0">  
+        <h3 className="text-xl font-semibold mb-0">Recipes Shared</h3>  
         <div className="flex justify-start bg-transparent">  
           <RecipesList searchQuery={searchQuery} />  
         </div>  

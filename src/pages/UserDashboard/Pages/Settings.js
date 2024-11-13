@@ -40,7 +40,7 @@ function SettingsPage() {
                             <Switch
                                 checked={isPrivate}
                                 onChange={handlePrivacyToggle}
-                                color="primary"
+                                color="#691a36"
                             />
                             <Typography variant="body1" className="ml-2">Private</Typography>
                         </div>

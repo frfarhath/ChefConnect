@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button } from '@mui/material';
+import { Button, TextField } from '@mui/material';
 
 function ChangePasswordModal({ isOpen, onClose, onSave }) {
     const [oldPassword, setOldPassword] = useState('');
@@ -7,6 +7,10 @@ function ChangePasswordModal({ isOpen, onClose, onSave }) {
     const [confirmPassword, setConfirmPassword] = useState('');
 
     const handleSave = () => {
+        if (!oldPassword || !newPassword || !confirmPassword) {
+            alert("Please fill out all fields!");
+            return;
+        }
         if (newPassword !== confirmPassword) {
             alert("New password and confirm password do not match!");
             return;
@@ -15,38 +19,64 @@ function ChangePasswordModal({ isOpen, onClose, onSave }) {
         onClose();
     };
 
+    const handleKeyPress = (event) => {
+        if (event.key === 'Enter') {
+            handleSave();
+        }
+    };
+
     if (!isOpen) return null;
 
     return (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-            <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[1000]">
+        <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full z-[1100]">
+    
                 <h3 className="text-xl font-semibold text-[#cc133d] mb-4">Change Password</h3>
-                <input
+
+                <TextField
                     type="password"
                     value={oldPassword}
                     onChange={(e) => setOldPassword(e.target.value)}
                     placeholder="Old password"
-                    className="w-full p-2 mb-2 border border-gray-300 rounded-lg"
+                    fullWidth
+                    className="mb-4"
+                    variant="outlined"
+                    onKeyPress={handleKeyPress}
                 />
-                <input
+                <TextField
                     type="password"
                     value={newPassword}
                     onChange={(e) => setNewPassword(e.target.value)}
                     placeholder="New password"
-                    className="w-full p-2 mb-2 border border-gray-300 rounded-lg"
+                    fullWidth
+                    className="mb-4"
+                    variant="outlined"
+                    onKeyPress={handleKeyPress}
                 />
-                <input
+                <TextField
                     type="password"
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
                     placeholder="Confirm new password"
-                    className="w-full p-2 mb-2 border border-gray-300 rounded-lg"
+                    fullWidth
+                    className="mb-4"
+                    variant="outlined"
+                    onKeyPress={handleKeyPress}
                 />
+
                 <div className="flex justify-end mt-4">
-                    <Button onClick={handleSave} variant="contained" className="bg-[#f6723e] text-white mr-2">
+                    <Button
+                        onClick={handleSave}
+                        variant="contained"
+                        sx={{ backgroundColor: '#f6723e', color: 'white', marginRight: '8px' }}
+                    >
                         Save
                     </Button>
-                    <Button onClick={onClose} variant="contained" className="bg-gray-400 text-white">
+                    <Button
+                        onClick={onClose}
+                        variant="contained"
+                        sx={{ backgroundColor: '#808080', color: 'white' }}
+                    >
                         Cancel
                     </Button>
                 </div>

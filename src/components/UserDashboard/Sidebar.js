@@ -28,6 +28,7 @@ const Sidebar = () => {
   </div>
 
   <div className="flex ml:flex-row md:flex-col space-y-4 md:space-y-3 justify-center md:justify-start w-full">
+    
     <a
       href="http://localhost:3000/userdashboard"
       className={`sidebar-link p-3 flex items-center rounded transition ${
@@ -35,7 +36,7 @@ const Sidebar = () => {
       }`}
       onClick={() => handleLinkClick('userdashboard')}
     >
-      <FaHome className="mr-2 md:mr-0" />
+      <FaHome className="mr-2" />
       <span className="hidden md:inline">Home</span>
     </a>
     <a

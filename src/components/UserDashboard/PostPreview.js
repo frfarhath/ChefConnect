@@ -66,25 +66,28 @@ function PostPreview({ recipeData }) {
         
         {/* Action Buttons with Font Awesome Icons */}
         <div className="mt-6 flex justify-around">
-          <button className="flex items-center text-gray-500 hover:text-gray-700">
-            <FaThumbsUp className="mr-2" />
-            <span className="hidden sm:inline">Like</span> {/* Hide text on small screens */}
+          <button className="flex items-center text-gray-500 hover:text-gray-700 gap-1">
+          <span className="hidden sm:inline">50</span> 
+          <FaThumbsUp className="mr-2" />
+            {/* Hide text on small screens */}
           </button>
-          <button className="flex items-center text-gray-500 hover:text-gray-700">
-            <FaThumbsDown className="mr-2" />
-            <span className="hidden sm:inline">Dislike</span> {/* Hide text on small screens */}
+          <button className="flex items-center text-gray-500 hover:text-gray-700 gap-1">
+          <span className="hidden sm:inline">10</span>
+           <FaThumbsDown className="mr-2" />
+             {/* Hide text on small screens */}
           </button>
-          <button className="flex items-center text-gray-500 hover:text-gray-700">
-            <FaComment className="mr-2" />
-            <span className="hidden sm:inline">Comment</span> {/* Hide text on small screens */}
+          <button className="flex items-center text-gray-500 hover:text-gray-700 gap-1">
+          <span className="hidden sm:inline">2</span>
+          <FaComment className="mr-2" />
+             {/* Hide text on small screens */}
           </button>
-          <button className="flex items-center text-gray-500 hover:text-gray-700">
+          <button className="flex items-center text-gray-500 hover:text-gray-700 ">
             <FaShare className="mr-2" />
-            <span className="hidden sm:inline">Share</span> {/* Hide text on small screens */}
+            {/* Hide text on small screens */}
           </button>
           <button className="flex items-center text-gray-500 hover:text-gray-700">
             <FaBookmark className="mr-2" />
-            <span className="hidden sm:inline">Save</span> {/* Hide text on small screens */}
+            {/* Hide text on small screens */}
           </button>
         </div>
       </div>

@@ -9,7 +9,7 @@ function UserDashboard() {
       <Sidebar />
       
       {/* Main content area, stacked below sidebar on smaller screens */}
-      <div className="flex-1 p-4 md:mt-0  overflow-y-auto">
+      <div className="flex-1 md:mt-0  overflow-y-auto">
         <Dashboard />
       </div>
     </div>

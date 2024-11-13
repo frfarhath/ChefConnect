@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { FaThumbsUp, FaThumbsDown, FaComment, FaBookmark } from 'react-icons/fa';
+import food1 from '../../assests/food1.jpg';
+import food2 from '../../assests/food2.jpg';
+import food3 from '../../assests/food3.jpg';
+import food4 from '../../assests/food4.jpg';
 
 const ViewRecipe = () => {
   const [comments, setComments] = useState([
@@ -102,10 +106,10 @@ const ViewRecipe = () => {
 
           <div className="flex flex-col md:flex-row">
             <div className="w-full md:w-1/3">
-              <img src="images/image1.jpg" className="rounded-l-lg w-full h-64 object-cover" alt="Recipe" />
+              <img src={food1} className="rounded-l-lg w-full h-64 object-cover" alt="Recipe" />
             </div>
             <div className="p-4 w-full md:w-2/3">
-              <a href="profile.html" className="text-[#691a36] font-medium text-lg">User123</a>
+            <a href="http://localhost:3000/userprofile" className="text-[#691a36] font-medium text-lg">User123</a>
               <p className="mt-2 text-lg">Description of the recipe goes here.</p>
             </div>
           </div>
