@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { FaThumbsUp, FaThumbsDown, FaComment, FaBookmark } from 'react-icons/fa';
 import food1 from '../../assests/food1.jpg';
-import food2 from '../../assests/food2.jpg';
-import food3 from '../../assests/food3.jpg';
-import food4 from '../../assests/food4.jpg';
+
 
 const ViewRecipe = () => {
   const [comments, setComments] = useState([
