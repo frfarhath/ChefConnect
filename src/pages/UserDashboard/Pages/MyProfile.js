@@ -79,7 +79,7 @@ function MyProfile() {
             {isModalOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
                     <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg w-full">
-                        <h3 className="text-xl font-semibold text-[#cc133d] mb-4">Edit Your Bio</h3>
+                        <h3 className="text-xl font-semibold text-[#cc133d] mb-4">Edit Your Bio Details</h3>
                         <textarea
                             value={newBio}
                             onChange={handleBioChange}
